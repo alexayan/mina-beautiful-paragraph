@@ -1,0 +1,8 @@
+<view class="body">
+  <view class="demo">
+    <comp content="{{demo1}}"></comp>
+  </view>
+  <view class="demo">
+    <comp content="{{demo2}}"></comp>
+  </view>
+</view>

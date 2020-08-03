@@ -1,0 +1,10 @@
+<view class="bp custom-class">
+  <view class="summary {{needJustify ? 'justify' : ''}}" wx:if="{{paragraphs.length === 0}}">
+    <text selectable="{{selectable}}" wx:for="{{summaryWords}}" wx:key="index" class="{{item.type}} {{item.needHideAfterJustify ? 'justify-hide' : ''}}">{{item.text}}</text>
+  </view>
+  <block wx:else>
+    <view class="summary justify" wx:for="{{paragraphs}}" wx:for-item="p">
+      <text selectable="{{selectable}}" wx:for="{{p}}" wx:key="index" class="{{item.type}}">{{item.text}}</text>
+    </view>
+  </block>
+</view>
