@@ -54,15 +54,5 @@ export function splitCJKWord(texts) {
       lastIndex += matchStr.length;
     }
   } while (match);
-  rtn.forEach((item, index, items) => {
-    const prev = items[index - 2];
-    if (!prev) {
-      return;
-    }
-    if (item.type === 'ncjk' && item.text.length === 1 && prev && prev.type === 'cjk') {
-      item.text = prev.text.slice(-1) + item.text;
-      prev.text = prev.text.slice(0, -1);
-    }
-  })
   return rtn;
 }
